@@ -8,8 +8,8 @@ test('launch browser', async()=>{
     
     await page.goto("https://www.redbus.in/")
     await page.waitForTimeout(2000)
-    console.log(page.title());
-    console.log(page.url());
+    console.log(await page.title());
+    console.log(await page.url());
     
 })
 test('launchbrowser firefox', async()=>{
@@ -20,8 +20,7 @@ test('launchbrowser firefox', async()=>{
     
     await page1.goto("https://www.flipkart.com/")
     await page1.waitForTimeout(2000)
-    console.log(page1.title());
-        console.log(page1.url());
+    console.log(await page1.title());
+        console.log(await page1.url());
 
 })
-
