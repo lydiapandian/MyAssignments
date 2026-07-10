@@ -27,3 +27,16 @@ console.log(`State count:${statecount}`)
 await page.locator('//select[@name="generalStateProvinceGeoId"]').selectOption({index:1});
 await page.locator('.smallSubmit').click()
 })
+
+helper file
+DataParameter.json
+[
+{
+"URL":"https://leaftaps.com/opentaps/control/main",
+"Username":"demoSalesManager",
+"Password": "crmsfa",
+"Companyname":"TestLeaf Education",
+"Firstname":"Lydia",
+"Lastname":"Pandian"
+}
+]
