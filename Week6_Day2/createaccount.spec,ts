@@ -1,0 +1,16 @@
+import test from "@playwright/test";
+import { verifyaccounts } from "../Pages/VerifyAccount";
+
+test("Create Account module using POM",async({page})=>{
+
+    let createaccount = new verifyaccounts(page)
+    await createaccount.LoadURL('https://leaftaps.com/opentaps/control/main')
+    await createaccount.Entercredentials("DemoSalesManager","crmsfa")
+    await createaccount.clickonlogin()
+    await createaccount.clickonCRMSFA()
+    await createaccount.ClickAccounts()
+    await createaccount.ClickCreateAccount()
+    await createaccount.fillmandatoryfield()
+    await createaccount.clickcreateaccount()
+    await createaccount.verifythecreatedaccounts()
+})
